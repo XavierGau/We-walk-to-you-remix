@@ -5,9 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- custom font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Abel&family=Inspiration&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&family=Inspiration&display=swap"
+      rel="stylesheet"
+    />
     <!-- end custom font -->
 
     <title>The night has eyes</title>
@@ -15,7 +18,7 @@
     <!-- styles -->
     <style>
       body {
-        font-family: 'Abel', sans-serif;
+        font-family: "Abel", sans-serif;
         margin: 2em;
         background-color: #1e1d2e;
         color: #ffed66;
@@ -28,7 +31,7 @@
         height: 1.2em;
       }
       .indent {
-        padding-left: 1em;
+        padding-left: 10em;
       }
     </style>
   </head>
@@ -39,6 +42,7 @@
       // set up the lists of words
       const subjects = "nobody,it,the night,the cold,the dark".split(","),
         verbs = "bounds,bites,stares,chews,cuts".split(","),
+        preposition = "through,past,over,against".split(","),
         objects = "me,you,her,him,them".split(",");
       // set up the counter
       let counter = 0;
@@ -59,7 +63,9 @@
           getRandomFromList(subjects) +
           " " +
           getRandomFromList(verbs) +
-          " through " +
+          " " +
+          getRandomFromList(preposition) +
+          " " +
           getRandomFromList(objects);
         const lineText = document.createTextNode(text);
         line.appendChild(lineText);
